@@ -8,7 +8,7 @@
       "testStrategy": "1. Verify successful MoonBit compilation to WASM\n2. Confirm project builds without errors\n3. Test CI/CD pipeline with sample commits\n4. Validate development environment with hello-world application\n5. Ensure all team members can successfully build and run the project",
       "priority": "high",
       "dependencies": [],
-      "status": "pending",
+      "status": "in-progress",
       "subtasks": [
         {
           "id": 1,
@@ -16,7 +16,7 @@
           "description": "Set up the core MoonBit development toolchain on the local development environment",
           "dependencies": [],
           "details": "1. Install the MoonBit compiler and runtime\n2. Configure environment variables for MoonBit tools\n3. Verify installation with version checks\n4. Install required dependencies (Rust/LLVM if needed)\n5. Set up WebAssembly compilation tools\n6. Document the installation process for team reference",
-          "status": "pending"
+          "status": "done"
         },
         {
           "id": 2,

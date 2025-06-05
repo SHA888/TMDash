@@ -1,6 +1,6 @@
 # Task ID: 1
 # Title: Setup MoonBit Development Environment
-# Status: pending
+# Status: in-progress
 # Dependencies: None
 # Priority: high
 # Description: Configure the development environment with MoonBit toolchain and establish the project structure for the telemedicine platform.
@@ -27,7 +27,7 @@
 5. Ensure all team members can successfully build and run the project
 
 # Subtasks:
-## 1. Install MoonBit Toolchain [pending]
+## 1. Install MoonBit Toolchain [done]
 ### Dependencies: None
 ### Description: Set up the core MoonBit development toolchain on the local development environment
 ### Details:
