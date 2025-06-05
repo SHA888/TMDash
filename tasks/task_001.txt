@@ -38,7 +38,7 @@
 5. Set up WebAssembly compilation tools
 6. Document the installation process for team reference
 
-## 2. Create Project Structure [pending]
+## 2. Create Project Structure [done]
 ### Dependencies: 1.1
 ### Description: Establish the standard MoonBit project directory structure and configuration files
 ### Details:

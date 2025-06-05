@@ -26,7 +26,7 @@
             1
           ],
           "details": "1. Initialize a new MoonBit project\n2. Set up source directories (src/, lib/, etc.)\n3. Create configuration files (.moonbit.toml)\n4. Set up module structure\n5. Configure package management\n6. Add documentation templates\n7. Create example files demonstrating project structure",
-          "status": "pending"
+          "status": "done"
         },
         {
           "id": 3,

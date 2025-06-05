@@ -1,10 +1,10 @@
 {
-  "name": "username/hello",
+  "name": "sha888/tmdash",
   "version": "0.1.0",
   "readme": "README.md",
-  "repository": "",
-  "license": "Apache-2.0",
-  "keywords": [],
-  "description": "",
+  "repository": "https://github.com/SHA888/TMDash",
+  "license": "MIT",
+  "keywords": ["telemedicine", "dashboard", "moonbit"],
+  "description": "A telemedicine dashboard built with MoonBit",
   "source": "src"
 }
