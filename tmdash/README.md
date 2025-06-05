@@ -1,5 +1,7 @@
 # TMDash - Telemedicine Dashboard
 
+[![CI/CD Status](https://github.com/SHA888/TMDash/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/SHA888/TMDash/actions/workflows/ci-cd.yml)
+
 A modern telemedicine dashboard built with MoonBit, designed to provide healthcare professionals with a powerful and intuitive interface for managing patient care.
 
 ## 🚀 Features
@@ -17,6 +19,14 @@ A modern telemedicine dashboard built with MoonBit, designed to provide healthca
 ## 🏗️ Build System
 
 The project uses MoonBit's built-in build system with custom configurations for different environments.
+
+## 🚀 CI/CD Pipeline
+
+The project includes a GitHub Actions workflow for continuous integration and deployment. The pipeline automatically builds, tests, and deploys the application on every push to the `main` branch.
+
+[![CI/CD Status](https://github.com/SHA888/TMDash/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/SHA888/TMDash/actions/workflows/ci-cd.yml)
+
+For detailed information about the CI/CD setup, see the [CI/CD Documentation](docs/CI_CD.md).
 
 ### Build Targets
 

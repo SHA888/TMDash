@@ -1,0 +1,83 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+env:
+  DEPLOY_ENV: production
+
+jobs:
+  build-and-test:
+    name: Build and Test
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    
+    - name: Set up MoonBit
+      uses: hustcer/setup-moonbit@v1
+      with:
+        version: 'latest'
+    
+    - name: Cache MoonBit packages
+      uses: actions/cache@v3
+      with:
+        path: |
+          ~/.moon
+          ~/moonbit
+        key: ${{ runner.os }}-moonbit-${{ hashFiles('**/moon.mod.json') }}
+        restore-keys: |
+          ${{ runner.os }}-moonbit-
+    
+    - name: Install dependencies
+      run: moon install
+    
+    - name: Build project
+      run: ./build.sh build
+    
+    - name: Run tests
+      run: ./build.sh test
+    
+    - name: Upload build artifacts
+      if: success()
+      uses: actions/upload-artifact@v3
+      with:
+        name: tmdash-build
+        path: |
+          dist/*
+          !dist/tests/
+  
+  deploy:
+    name: Deploy
+    needs: build-and-test
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    environment: production
+    
+    steps:
+    - name: Download artifacts
+      uses: actions/download-artifact@v3
+      with:
+        name: tmdash-build
+        path: dist/
+    
+    - name: Deploy to production
+      run: |
+        echo "Deploying to ${{ env.DEPLOY_ENV }} environment"
+        # Add your deployment commands here
+        # For example: scp -r dist/* user@server:/path/to/deploy
+        echo "Deployment to ${{ env.DEPLOY_ENV }} completed"
+    
+    - name: Notify deployment status
+      if: always()
+      uses: rtCamp/action-slack-notify@v2
+      env:
+        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
+        SLACK_TITLE: "Deployment to ${{ env.DEPLOY_ENV }}"
+        SLACK_MESSAGE: "Deployment of ${{ github.repository }}@${{ github.sha }} to ${{ env.DEPLOY_ENV }} ${{ job.status }}."
+        SLACK_COLOR: ${{ job.status == 'success' && 'good' || 'danger' }}
