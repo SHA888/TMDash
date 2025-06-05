@@ -1,10 +1,55 @@
 {
-  "name": "sha888/tmdash",
+  "name": "tmdash",
   "version": "0.1.0",
-  "readme": "README.md",
-  "repository": "https://github.com/SHA888/TMDash",
-  "license": "MIT",
-  "keywords": ["telemedicine", "dashboard", "moonbit"],
-  "description": "A telemedicine dashboard built with MoonBit",
-  "source": "src"
+  "source": "src",
+  "is-main": true,
+  
+  // Build targets
+  "targets": {
+    "main": {
+      "main": "main/main.mbt",
+      "output": "dist/tmdash.wasm"
+    },
+    "test": {
+      "sources": ["tests/**/*.mbt"],
+      "output": "dist/tests"
+    }
+  },
+  
+  // Build profiles
+  "profiles": {
+    "debug": {
+      "optimization": "none",
+      "debug": true,
+      "source-map": true
+    },
+    "release": {
+      "optimization": "size",
+      "debug": false,
+      "source-map": false
+    }
+  },
+  
+  // Dependencies
+  "dependencies": {},
+  
+  // Build scripts
+  "scripts": {
+    "build": "moon build --profile=release",
+    "build:debug": "moon build --profile=debug",
+    "test": "moon test",
+    "clean": "rm -rf dist/*",
+    "start": "moon run src/main/main.mbt"
+  },
+  
+  // Metadata
+  "metadata": {
+    "description": "A telemedicine dashboard built with MoonBit",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/SHA888/TMDash"
+    },
+    "keywords": ["telemedicine", "dashboard", "moonbit"]
+  }
 }
