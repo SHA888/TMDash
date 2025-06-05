@@ -1,4 +1,4 @@
-TMDash - # Telemedicine Dashboard
+# TMDash - Telemedicine Dashboard
 
 A web-based telemedicine platform built with MoonBit, leveraging WebAssembly (WASM) for high performance and AI-native features for intelligent health data processing. The dashboard enables real-time video/chat communication, health data visualization, appointment management, and AI-driven insights for patients and healthcare providers.
 
