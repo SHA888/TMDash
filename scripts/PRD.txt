@@ -1,0 +1,383 @@
+<PRD>
+# Overview  
+TMDash is a comprehensive web-based telemedicine platform designed to bridge the gap between healthcare providers and patients through secure, real-time communication and intelligent health data processing. Built with the emerging MoonBit programming language and leveraging WebAssembly (WASM) technology, TMDash offers a high-performance, secure solution that addresses the growing demand for remote healthcare services.
+
+The platform solves several critical problems in modern healthcare delivery:
+1. Limited access to healthcare for patients in remote or underserved areas
+2. Inefficient patient monitoring and health data management
+3. Lack of intelligent insights from patient health data
+4. Security and privacy concerns with sensitive health information
+
+TMDash serves both healthcare providers (doctors, nurses, specialists) and patients, creating value through:
+- Reduced need for in-person visits for routine consultations
+- Enhanced patient monitoring through real-time data visualization and anomaly detection
+- AI-driven insights that help predict health issues before they become serious
+- Secure, HIPAA-compliant data transmission and storage
+- Improved scheduling and appointment management capabilities
+
+# Core Features  
+
+## 1. Real-Time Communication
+### What it does:
+Enables seamless video calls and text chat between healthcare providers and patients.
+
+### Why it's important:
+Forms the foundation of remote consultations, allowing for face-to-face interactions without physical presence.
+
+### How it works:
+- Utilizes WebRTC technology through JavaScript interop for peer-to-peer video streaming
+- Implements WebSocket connections for real-time text chat functionality
+- Provides options for screen sharing and file transfer during consultations
+- Includes waiting room functionality and provider availability status
+- Optimizes video quality based on available bandwidth
+
+## 2. Health Data Visualization
+### What it does:
+Displays patient vital signs and health metrics in intuitive, real-time charts and graphs.
+
+### Why it's important:
+Allows healthcare providers to quickly assess patient status and track changes over time.
+
+### How it works:
+- Integrates with patient monitoring devices through standard health data protocols
+- Renders interactive charts using Chart.js via JavaScript interop
+- Presents historical trends alongside current readings
+- Color-codes values based on normal/warning/critical thresholds
+- Supports various visualization types (line charts, histograms, heat maps)
+- Enables custom dashboards for different medical specialties
+
+## 3. Appointment Management
+### What it does:
+Facilitates scheduling, managing, and sending reminders for patient appointments.
+
+### Why it's important:
+Streamlines administrative workflow and reduces missed appointments.
+
+### How it works:
+- Calendar interface with availability management for providers
+- Patient self-scheduling with provider approval workflow
+- Automated reminder system via email, SMS, or in-app notifications
+- Integration with external calendar systems (Google, Outlook)
+- Cancellation and rescheduling functionality with configurable policies
+- Follow-up appointment scheduling based on treatment protocols
+
+## 4. AI-Driven Insights
+### What it does:
+Processes patient health data to provide automated summaries and detect potential anomalies.
+
+### Why it's important:
+Augments clinical decision-making and helps identify issues that might otherwise be missed.
+
+### How it works:
+- Leverages MoonBit's AI assistant and torch library for health data analysis
+- Implements machine learning models for anomaly detection in vital signs
+- Generates human-readable summaries of patient health data
+- Identifies patterns and correlations across multiple data points
+- Provides predictive analytics for potential health issues
+- Suggests follow-up questions or tests based on data patterns
+
+## 5. Secure Data Handling
+### What it does:
+Ensures patient data is securely stored, transmitted, and accessed only by authorized personnel.
+
+### Why it's important:
+Protects sensitive health information and ensures compliance with healthcare privacy regulations.
+
+### How it works:
+- Implements end-to-end encryption for all data transmission
+- Utilizes MoonBit's type system for data validation and integrity checks
+- Structures access control with role-based permissions system
+- Maintains detailed audit logs of all data access and modifications
+- Provides secure data export and sharing options for patient records
+- Implements automatic session timeouts and multi-factor authentication
+
+## 6. Cross-Platform Compatibility
+### What it does:
+Allows access to the telemedicine platform across different devices and operating systems.
+
+### Why it's important:
+Increases accessibility for users regardless of their preferred device or location.
+
+### How it works:
+- Employs WebAssembly for consistent performance across browsers
+- Implements responsive design principles for interface adaptation
+- Optimizes network usage for varying connection qualities
+- Provides offline capabilities for certain functionality
+- Ensures consistent user experience across desktop and mobile devices
+
+# User Experience  
+
+## User Personas
+
+### Healthcare Provider (Dr. Sarah Chen)
+- **Role**: Family physician at a multi-specialty clinic
+- **Goals**: Efficiently manage patient load, provide quality care remotely, access patient history quickly
+- **Pain Points**: Limited time between appointments, difficulty monitoring patient compliance, tedious documentation
+- **Technical Proficiency**: Moderate; comfortable with basic technology but values simplicity and efficiency
+
+### Patient (James Rodriguez)
+- **Role**: 45-year-old with chronic hypertension requiring regular monitoring
+- **Goals**: Convenient access to healthcare, avoid unnecessary travel to doctor's office, understand health trends
+- **Pain Points**: Busy work schedule, forgets to take measurements regularly, difficulty interpreting health data
+- **Technical Proficiency**: Basic; uses smartphone and email but prefers straightforward interfaces
+
+### Clinic Administrator (Maya Johnson)
+- **Role**: Manages scheduling and operations for a healthcare practice
+- **Goals**: Minimize no-shows, optimize provider schedules, ensure smooth patient flow
+- **Pain Points**: Manual rescheduling, communicating changes to both patients and providers, tracking consultation notes
+- **Technical Proficiency**: Advanced; uses multiple software systems daily and appreciates automation
+
+## Key User Flows
+
+### Provider Flow: Conducting a Telemedicine Consultation
+1. Login to TMDash using secure credentials
+2. View daily appointment schedule on dashboard
+3. Review patient health data and previous visit notes before consultation
+4. Join video consultation from appointment card
+5. During consultation, view real-time and historical health data
+6. Annotate charts or highlight concerning trends for patient
+7. Document findings and recommendations in structured format
+8. Prescribe medications or order tests if needed
+9. Schedule follow-up appointment
+10. End consultation and finalize documentation
+
+### Patient Flow: Health Monitoring and Consultation
+1. Login to patient portal via web or mobile interface
+2. View upcoming appointments and reminders
+3. Record new health measurements (e.g., blood pressure, glucose levels)
+4. Review personal health trends with AI-generated insights
+5. Join scheduled video consultation
+6. Discuss health concerns and view shared screens/data
+7. Receive and acknowledge treatment plan
+8. Schedule follow-up appointments
+9. Access post-visit summary and instructions
+
+### Administrative Flow: Appointment Management
+1. Login to administrative dashboard
+2. View daily/weekly schedule across all providers
+3. Process appointment requests from patients
+4. Manage provider availability and special scheduling requirements
+5. Send automated reminders for upcoming appointments
+6. Handle cancellations and reschedule appointments
+7. Generate reports on appointment utilization and no-show rates
+
+## UI/UX Considerations
+
+- **Intuitive Navigation**: Clear, consistent navigation structure with breadcrumbs and logical information hierarchy
+- **Accessibility Compliance**: WCAG 2.1 AA compliance for all interfaces, including screen reader support, keyboard navigation, and appropriate color contrast
+- **Responsive Design**: Fluid layouts that adapt to different screen sizes and orientations
+- **Visual Hierarchy**: Important information and actions emphasized through size, color, and positioning
+- **Consistent Design Language**: Uniform color palette, typography, and interactive elements throughout the application
+- **Progressive Disclosure**: Complex information presented in manageable chunks to avoid overwhelming users
+- **Real-time Feedback**: Clear status indicators for system processes and user actions
+- **Guided Workflows**: Step-by-step processes for complex tasks with clear indicators of progress
+- **Error Prevention**: Validation and confirmation steps to prevent user mistakes
+- **Help System**: Contextual help, tooltips, and a comprehensive knowledge base
+
+# Technical Architecture  
+
+## System Components
+1. **Frontend Layer**
+   - Web-based UI built with MoonBit/WASM
+   - Responsive design for desktop and mobile
+   - Chart.js integration for data visualization
+   - WebRTC for real-time video communication
+
+2. **Application Layer**
+   - MoonBit backend services compiled to WASM
+   - RESTful API endpoints for data operations
+   - WebSocket server for real-time features
+   - Authentication and authorization services
+
+3. **Data Layer**
+   - PostgreSQL database for structured health data
+   - Redis for caching and real-time data
+   - Secure file storage for documents and media
+
+4. **AI/ML Services**
+   - Anomaly detection for health metrics
+   - Natural language processing for clinical notes
+   - Predictive analytics engine
+
+## Data Models
+- **User**: Base user model with authentication details
+- **Patient**: Extends User with medical history and vitals
+- **Provider**: Healthcare professional with specialization and availability
+- **Appointment**: Scheduling and consultation details
+- **Vital**: Health metrics with timestamps and metadata
+- **Consultation**: Record of patient-provider interactions
+- **Prescription**: Medication and treatment plans
+
+## APIs and Integrations
+- **Internal APIs**:
+  - `/api/v1/auth`: Authentication and user management
+  - `/api/v1/patients`: Patient data operations
+  - `/api/v1/providers`: Provider management
+  - `/api/v1/appointments`: Scheduling system
+  - `/api/v1/vitals`: Health data collection and retrieval
+  - `/api/v1/consultations`: Video and chat services
+  - `/api/v1/ai`: AI/ML model endpoints
+
+- **External Integrations**:
+  - Payment gateways (Stripe, PayPal)
+  - EHR/EMR systems (HL7/FHIR)
+  - Pharmacy systems
+  - Lab result services
+  - Calendar services (Google, Outlook)
+  - SMS/Email notification services
+
+## Infrastructure Requirements
+- **Development**:
+  - MoonBit toolchain
+  - Node.js v16+
+  - PostgreSQL 13+
+  - Redis 6+
+
+- **Production**:
+  - Cloud hosting (AWS/Azure/GCP)
+  - Container orchestration (Kubernetes)
+  - CDN for global content delivery
+  - Monitoring and logging (Prometheus, ELK stack)
+  - Backup and disaster recovery
+
+# Development Roadmap  
+
+## Phase 1: Core Infrastructure (Weeks 1-4)
+1. **Foundation**
+   - Set up MoonBit development environment
+   - Configure CI/CD pipeline
+   - Implement authentication system
+   - Design and implement core data models
+
+2. **Basic Features**
+   - User registration and profiles
+   - Provider management
+   - Basic appointment scheduling
+   - Simple chat functionality
+
+## Phase 2: Core Functionality (Weeks 5-8)
+1. **Telemedicine Features**
+   - Video consultation system
+   - Real-time chat
+   - File sharing
+   - Waiting room functionality
+
+2. **Health Data Management**
+   - Vitals tracking and visualization
+   - Health history
+   - Basic reporting
+
+## Phase 3: Advanced Features (Weeks 9-12)
+1. **AI/ML Integration**
+   - Anomaly detection
+   - Health insights
+   - Predictive analytics
+
+2. **Administrative Tools**
+   - Dashboard analytics
+   - Reporting tools
+   - Billing integration
+
+## Phase 4: Polish and Scale (Weeks 13-16)
+1. **Enhancements**
+   - Performance optimization
+   - Mobile responsiveness
+   - Accessibility improvements
+
+2. **Scaling**
+   - Load testing
+   - Infrastructure scaling
+   - Global CDN setup
+
+# Logical Dependency Chain
+
+## Foundation Layer (Must be completed first)
+1. User authentication and authorization
+2. Core data models and database schema
+3. Basic API endpoints for CRUD operations
+4. Frontend scaffolding and routing
+
+## Core Functionality (Builds on Foundation)
+1. Appointment scheduling system
+2. Real-time communication infrastructure
+3. Health data collection and storage
+4. Basic reporting and visualization
+
+## Enhanced Features (Requires Core)
+1. Advanced analytics and AI insights
+2. Integration with external systems
+3. Mobile optimization
+4. Advanced security features
+
+## Final Polish (Last Steps)
+1. Performance optimization
+2. User experience refinements
+3. Comprehensive testing
+4. Documentation and training materials
+
+# Risks and Mitigations  
+
+## Technical Challenges
+1. **WASM Performance**
+   - Risk: Performance bottlenecks in critical paths
+   - Mitigation: Profile and optimize hot code paths, use Web Workers for intensive tasks
+
+2. **Real-time Communication**
+   - Risk: Latency or reliability issues in video/chat
+   - Mitigation: Implement fallback mechanisms, optimize WebRTC configuration
+
+## Security Concerns
+1. **Data Privacy**
+   - Risk: Sensitive health data exposure
+   - Mitigation: End-to-end encryption, strict access controls, regular audits
+
+2. **Compliance**
+   - Risk: Failing to meet healthcare regulations
+   - Mitigation: Engage compliance experts, regular security assessments
+
+## Resource Constraints
+1. **Development Resources**
+   - Risk: Limited MoonBit expertise
+   - Mitigation: Training, documentation, and knowledge sharing
+
+2. **Time to Market**
+   - Risk: Delays in development
+   - Mitigation: Agile methodology, MVP approach, phased rollouts
+
+# Appendix  
+
+## Research Findings
+- Market research shows increasing demand for telemedicine post-pandemic
+- Healthcare providers prioritize ease of use and integration with existing systems
+- Patients value convenience and access to their health data
+
+## Technical Specifications
+- **Frontend**: MoonBit/WASM, HTML5, CSS3, JavaScript
+- **Backend**: MoonBit, Node.js
+- **Database**: PostgreSQL, Redis
+- **AI/ML**: Python (for model training), ONNX runtime for inference
+- **Infrastructure**: Docker, Kubernetes, Cloud Provider (AWS/Azure/GCP)
+- **Compliance**: HIPAA, GDPR, HITRUST
+
+## Success Metrics
+- User adoption rate
+- Average consultation duration
+- System uptime and reliability
+- User satisfaction scores
+- Reduction in no-show rates
+- Time saved for healthcare providers
+
+## Future Enhancements
+1. Integration with wearable devices
+2. Advanced AI diagnostics
+3. Multi-language support
+4. Telepharmacy services
+5. Chronic disease management modules
+6. Virtual reality consultations
+
+## Support and Maintenance
+- 24/7 monitoring
+- Regular security updates
+- Quarterly feature releases
+- Comprehensive documentation
+- Training and onboarding support
