@@ -1,0 +1,61 @@
+# Task ID: 2
+# Title: Implement Core Data Models and Database Schema
+# Status: pending
+# Dependencies: 1
+# Priority: high
+# Description: Design and implement the foundational data models and database schema required for the TMDash platform.
+# Details:
+1. Design database schema for PostgreSQL with the following models:
+   - User: Base user model with authentication details
+   - Patient: Extends User with medical history and vitals
+   - Provider: Healthcare professional with specialization and availability
+   - Appointment: Scheduling and consultation details
+   - Vital: Health metrics with timestamps and metadata
+   - Consultation: Record of patient-provider interactions
+   - Prescription: Medication and treatment plans
+2. Implement data models in MoonBit with appropriate type safety
+3. Create database migration scripts
+4. Set up Redis for caching and real-time data storage
+5. Implement data validation logic using MoonBit's type system
+6. Design and implement data access layer
+7. Create seed data for development and testing
+
+# Test Strategy:
+1. Unit tests for each data model
+2. Integration tests for database operations
+3. Validation tests for data integrity constraints
+4. Performance tests for common queries
+5. Test database migration and rollback procedures
+6. Verify Redis caching functionality
+
+# Subtasks:
+## 1. Design User and Authentication Models [pending]
+### Dependencies: None
+### Description: Implement the User model with authentication capabilities and role-based access control
+### Details:
+Create the User model with fields for authentication (email, password hash, 2FA), profile information (name, contact details), role management (admin, provider, patient, staff), account status tracking, and audit fields (created_at, updated_at). Implement validation rules for email format, password strength, and required fields. Create database migrations for the User table with appropriate indexes on frequently queried fields.
+
+## 2. Implement Patient and Provider Models [pending]
+### Dependencies: 2.1
+### Description: Create the Patient and Provider models with their specific attributes and relationships to the User model
+### Details:
+Develop the Patient model with medical history, demographics, insurance information, emergency contacts, and relationship to User model. Create the Provider model with specialization, credentials, availability schedule, and relationship to User model. Implement validation rules for required medical information and credential verification. Create database migrations with appropriate foreign key relationships to the User table and necessary indexes.
+
+## 3. Develop Appointment and Scheduling Models [pending]
+### Dependencies: 2.2
+### Description: Implement the Appointment model with scheduling capabilities and relationships to Patient and Provider
+### Details:
+Create the Appointment model with datetime fields, status tracking (scheduled, confirmed, completed, canceled), appointment type, duration, location/room information, and relationships to Patient and Provider models. Implement validation rules for scheduling conflicts, business hours, and required fields. Create database migrations with appropriate foreign keys and indexes for efficient appointment queries and reporting.
+
+## 4. Implement Clinical Models (Vital Signs and Consultation) [pending]
+### Dependencies: 2.2, 2.3
+### Description: Create the Vital Signs and Consultation models to track patient clinical information
+### Details:
+Develop the Vital model with fields for various measurements (blood pressure, heart rate, temperature, etc.), timestamp, and relationships to Patient and Appointment. Create the Consultation model with chief complaint, diagnosis, notes, follow-up recommendations, and relationships to Patient, Provider, and Appointment. Implement validation rules for vital sign ranges and required clinical fields. Create database migrations with appropriate relationships and indexes for efficient clinical data retrieval.
+
+## 5. Implement Prescription Model and Database Caching Strategy [pending]
+### Dependencies: 2.4
+### Description: Create the Prescription model and implement database caching for performance optimization
+### Details:
+Develop the Prescription model with medication details, dosage, frequency, duration, refill information, and relationships to Patient, Provider, and Consultation. Implement validation rules for medication interactions, dosage limits, and required prescription fields. Create database migrations with appropriate relationships. Design and implement a caching strategy for frequently accessed data (patient records, appointment schedules) using Redis or a similar caching solution. Document the complete database schema and relationships for all models.
+

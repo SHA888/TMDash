@@ -1,0 +1,107 @@
+{
+  "meta": {
+    "generatedAt": "2025-06-05T16:25:08.970Z",
+    "tasksAnalyzed": 12,
+    "thresholdScore": 5,
+    "projectName": "Taskmaster",
+    "usedResearch": true
+  },
+  "complexityAnalysis": [
+    {
+      "taskId": 1,
+      "taskTitle": "Setup MoonBit Development Environment",
+      "complexityScore": 7,
+      "recommendedSubtasks": 4,
+      "expansionPrompt": "Break down the MoonBit development environment setup into detailed implementation steps, including toolchain installation, project structure creation, build system configuration, and CI/CD pipeline setup.",
+      "reasoning": "Setting up the MoonBit environment involves multiple technical components including toolchain installation, project structure setup, build configuration, and CI/CD pipeline. The task requires understanding of MoonBit-specific tools and WebAssembly compilation, making it moderately complex."
+    },
+    {
+      "taskId": 2,
+      "taskTitle": "Implement Core Data Models and Database Schema",
+      "complexityScore": 8,
+      "recommendedSubtasks": 5,
+      "expansionPrompt": "Detail the implementation steps for each core data model (User, Patient, Provider, Appointment, Vital, Consultation, Prescription) including their relationships, validation rules, and database migration strategy.",
+      "reasoning": "This task involves designing and implementing multiple interconnected data models with complex relationships, creating database schemas, implementing validation logic, and setting up caching. The healthcare domain adds complexity due to specialized data requirements."
+    },
+    {
+      "taskId": 3,
+      "taskTitle": "Develop Authentication and Authorization System",
+      "complexityScore": 9,
+      "recommendedSubtasks": 6,
+      "expansionPrompt": "Expand the authentication and authorization system implementation into detailed subtasks covering user registration, secure password management, JWT implementation, role-based access control, MFA, and audit logging.",
+      "reasoning": "This task requires implementing sophisticated security features including HIPAA compliance, role-based access control, multi-factor authentication, and secure session management. The security requirements and healthcare compliance aspects significantly increase complexity."
+    },
+    {
+      "taskId": 4,
+      "taskTitle": "Build Appointment Management System",
+      "complexityScore": 7,
+      "recommendedSubtasks": 5,
+      "expansionPrompt": "Break down the appointment management system into detailed implementation steps for calendar interface, scheduling workflows, reminder system, external calendar integration, and appointment analytics.",
+      "reasoning": "The appointment system involves multiple interconnected features including calendar management, scheduling logic, reminder systems, and external integrations. The workflow complexity and need for conflict resolution add to the implementation challenges."
+    },
+    {
+      "taskId": 5,
+      "taskTitle": "Implement Real-Time Communication System",
+      "complexityScore": 9,
+      "recommendedSubtasks": 6,
+      "expansionPrompt": "Detail the implementation steps for the WebRTC-based video consultation system, including WebSocket integration, screen sharing, waiting room functionality, encryption, and fallback mechanisms.",
+      "reasoning": "Real-time communication involves complex technologies like WebRTC and WebSockets, with additional challenges of end-to-end encryption, adaptive video quality, and handling poor connectivity scenarios. The real-time nature and security requirements make this highly complex."
+    },
+    {
+      "taskId": 6,
+      "taskTitle": "Develop Health Data Visualization System",
+      "complexityScore": 7,
+      "recommendedSubtasks": 4,
+      "expansionPrompt": "Break down the health data visualization implementation into detailed steps for Chart.js integration, data processing, interactive chart creation, and real-time update functionality.",
+      "reasoning": "This task requires JavaScript interop with Chart.js, implementing various visualization types, real-time updates, and responsive design. The complexity comes from handling different chart types and ensuring accurate representation of medical data."
+    },
+    {
+      "taskId": 7,
+      "taskTitle": "Implement AI-Driven Health Insights Engine",
+      "complexityScore": 10,
+      "recommendedSubtasks": 7,
+      "expansionPrompt": "Detail the implementation steps for the AI health insights engine, including anomaly detection algorithms, summary generation, pattern recognition, predictive analytics, and model training pipeline.",
+      "reasoning": "This task involves sophisticated AI/ML implementation for health data analysis, requiring expertise in both healthcare domain knowledge and machine learning. The complexity of developing accurate models, ensuring explainability, and implementing feedback loops makes this the most complex task."
+    },
+    {
+      "taskId": 8,
+      "taskTitle": "Develop Secure Data Handling System",
+      "complexityScore": 9,
+      "recommendedSubtasks": 5,
+      "expansionPrompt": "Break down the secure data handling system into detailed implementation steps for encryption, access control, audit logging, data anonymization, and compliance reporting.",
+      "reasoning": "Security implementation for healthcare data involves stringent requirements including end-to-end encryption, detailed audit logging, and HIPAA compliance. The regulatory requirements and critical nature of protecting patient data significantly increase complexity."
+    },
+    {
+      "taskId": 9,
+      "taskTitle": "Implement Cross-Platform Compatibility",
+      "complexityScore": 6,
+      "recommendedSubtasks": 4,
+      "expansionPrompt": "Detail the implementation steps for ensuring cross-platform compatibility, including WebAssembly optimization, responsive design, offline capabilities, and device-specific adaptations.",
+      "reasoning": "This task focuses on ensuring consistent functionality across different platforms and devices, requiring WebAssembly optimization and responsive design implementation. While technically challenging, it's more straightforward than some of the other tasks."
+    },
+    {
+      "taskId": 10,
+      "taskTitle": "Develop External System Integrations",
+      "complexityScore": 8,
+      "recommendedSubtasks": 5,
+      "expansionPrompt": "Break down the external system integrations into detailed implementation steps for EHR/EMR systems, payment gateways, pharmacy systems, notification services, and API gateway development.",
+      "reasoning": "Integrating with multiple external healthcare systems requires implementing various protocols (HL7/FHIR) and connecting with different services. The complexity comes from ensuring reliable data exchange and handling different integration requirements."
+    },
+    {
+      "taskId": 11,
+      "taskTitle": "Build Administrative Dashboard and Reporting",
+      "complexityScore": 6,
+      "recommendedSubtasks": 4,
+      "expansionPrompt": "Detail the implementation steps for the administrative dashboard, including KPI visualization, reporting tools, analytics features, and user management interface.",
+      "reasoning": "This task involves creating administrative interfaces and reporting tools, which are complex but follow more standard implementation patterns. The main challenges are in data aggregation and visualization rather than novel technical implementations."
+    },
+    {
+      "taskId": 12,
+      "taskTitle": "Implement System Optimization and Scaling",
+      "complexityScore": 8,
+      "recommendedSubtasks": 5,
+      "expansionPrompt": "Break down the system optimization and scaling implementation into detailed steps for caching strategy, database optimization, load balancing, auto-scaling, and performance monitoring.",
+      "reasoning": "System optimization requires deep technical knowledge of caching, database performance, load balancing, and cloud infrastructure. The need to maintain performance at scale while ensuring zero downtime adds significant complexity."
+    }
+  ]
+}
