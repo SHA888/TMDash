@@ -48,13 +48,10 @@ jobs:
     
     - name: Upload build artifacts
       if: success()
-      working-directory: ./tmdash
       uses: actions/upload-artifact@v4
       with:
         name: tmdash-build
-        path: |
-          dist/*
-          !dist/tests/
+        path: tmdash/dist/**
   
   deploy:
     name: Deploy
@@ -68,7 +65,7 @@ jobs:
       uses: actions/download-artifact@v4
       with:
         name: tmdash-build
-        path: dist/
+        path: tmdash/dist/
     
     - name: Deploy to production
       run: |
