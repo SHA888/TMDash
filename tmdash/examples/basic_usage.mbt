@@ -1,8 +1,7 @@
 // TMDash Basic Usage Example
 // This file demonstrates basic usage of the TMDash core functionality
 
-// Import the core library
-@lib
+// Core functionality is automatically available in MoonBit
 
 // Example: User Management
 struct User {
@@ -14,8 +13,10 @@ struct User {
 
 // Create a new user
 fn create_user(username: String, email: String, role: String) -> User {
+  // In a real application, you would generate a proper unique ID here
+  // For demo purposes, we'll just use a simple string
   {
-    id: "user_" + (System::time_now() % 1000000).to_string(),
+    id: "user_" + username,  // Using username for demo, not for production
     username: username,
     email: email,
     role: role
@@ -33,8 +34,10 @@ struct Appointment {
 
 // Create a new appointment
 fn create_appointment(patient_id: String, doctor_id: String, date_time: String) -> Appointment {
+  // In a real application, generate a proper unique ID
+  // For demo, we'll combine patient_id and doctor_id with a timestamp
   {
-    id: "appt_" + (System::time_now() % 1000000).to_string(),
+    id: "appt_" + patient_id + "_" + doctor_id,
     patient_id: patient_id,
     doctor_id: doctor_id,
     date_time: date_time,
@@ -43,7 +46,7 @@ fn create_appointment(patient_id: String, doctor_id: String, date_time: String) 
 }
 
 // Main function to demonstrate usage
-fn main {
+fn main() -> Unit {
   println("=== TMDash Basic Usage Example ===\n")
   
   // Create a sample user

@@ -62,7 +62,7 @@
       "dependencies": [
         1
       ],
-      "status": "pending",
+      "status": "in-progress",
       "subtasks": [
         {
           "id": 1,
@@ -70,7 +70,7 @@
           "description": "Implement the User model with authentication capabilities and role-based access control",
           "dependencies": [],
           "details": "Create the User model with fields for authentication (email, password hash, 2FA), profile information (name, contact details), role management (admin, provider, patient, staff), account status tracking, and audit fields (created_at, updated_at). Implement validation rules for email format, password strength, and required fields. Create database migrations for the User table with appropriate indexes on frequently queried fields.",
-          "status": "pending"
+          "status": "in-progress"
         },
         {
           "id": 2,

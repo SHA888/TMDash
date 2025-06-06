@@ -33,11 +33,17 @@
   // Dependencies
   "dependencies": {},
   
+  // Test dependencies
+  "test-dependencies": {
+    "user": "./src/models/user"
+  },
+  
   // Build scripts
   "scripts": {
     "build": "moon build --profile=release",
     "build:debug": "moon build --profile=debug",
     "test": "moon test",
+    "test:watch": "moon test --watch",
     "clean": "rm -rf dist/*",
     "start": "moon run src/main/main.mbt"
   },

@@ -1,6 +1,6 @@
 # Task ID: 2
 # Title: Implement Core Data Models and Database Schema
-# Status: pending
+# Status: in-progress
 # Dependencies: 1
 # Priority: high
 # Description: Design and implement the foundational data models and database schema required for the TMDash platform.
@@ -29,7 +29,7 @@
 6. Verify Redis caching functionality
 
 # Subtasks:
-## 1. Design User and Authentication Models [pending]
+## 1. Design User and Authentication Models [in-progress]
 ### Dependencies: None
 ### Description: Implement the User model with authentication capabilities and role-based access control
 ### Details:
