@@ -1,6 +1,6 @@
 # Task ID: 1
 # Title: Setup MoonBit Development Environment
-# Status: in-progress
+# Status: done
 # Dependencies: None
 # Priority: high
 # Description: Configure the development environment with MoonBit toolchain and establish the project structure for the telemedicine platform.
@@ -62,7 +62,7 @@
 6. Configure optimization settings
 7. Document build commands and options
 
-## 4. Set Up CI/CD Pipeline [pending]
+## 4. Set Up CI/CD Pipeline [done]
 ### Dependencies: 1.2, 1.3
 ### Description: Establish continuous integration and deployment pipeline for MoonBit projects
 ### Details:

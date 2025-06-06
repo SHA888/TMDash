@@ -8,7 +8,7 @@
       "testStrategy": "1. Verify successful MoonBit compilation to WASM\n2. Confirm project builds without errors\n3. Test CI/CD pipeline with sample commits\n4. Validate development environment with hello-world application\n5. Ensure all team members can successfully build and run the project",
       "priority": "high",
       "dependencies": [],
-      "status": "in-progress",
+      "status": "done",
       "subtasks": [
         {
           "id": 1,
@@ -48,7 +48,7 @@
             3
           ],
           "details": "1. Choose CI/CD platform (GitHub Actions, GitLab CI, etc.)\n2. Create workflow configuration files\n3. Set up automated testing in the pipeline\n4. Configure build verification steps\n5. Set up deployment to staging/production environments\n6. Configure artifact storage\n7. Set up notifications for build status\n8. Document the CI/CD process",
-          "status": "pending"
+          "status": "done"
         }
       ]
     },
