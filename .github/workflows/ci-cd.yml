@@ -53,32 +53,4 @@ jobs:
         name: tmdash-build
         path: tmdash/dist/**
   
-  deploy:
-    name: Deploy
-    needs: build-and-test
-    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
-    runs-on: ubuntu-latest
-    environment: production
-    
-    steps:
-    - name: Download artifacts
-      uses: actions/download-artifact@v4
-      with:
-        name: tmdash-build
-        path: tmdash/dist/
-    
-    - name: Deploy to production
-      run: |
-        echo "Deploying to ${{ env.DEPLOY_ENV }} environment"
-        # Add your deployment commands here
-        # For example: scp -r dist/* user@server:/path/to/deploy
-        echo "Deployment to ${{ env.DEPLOY_ENV }} completed"
-    
-    - name: Notify deployment status
-      if: always()
-      uses: rtCamp/action-slack-notify@v2
-      env:
-        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
-        SLACK_TITLE: "Deployment to ${{ env.DEPLOY_ENV }}"
-        SLACK_MESSAGE: "Deployment of ${{ github.repository }}@${{ github.sha }} to ${{ env.DEPLOY_ENV }} ${{ job.status }}."
-        SLACK_COLOR: ${{ job.status == 'success' && 'good' || 'danger' }}
+# Deploy job has been removed as per user request
