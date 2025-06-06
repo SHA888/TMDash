@@ -35,16 +35,20 @@ jobs:
           ${{ runner.os }}-moonbit-
     
     - name: Install dependencies
+      working-directory: ./tmdash
       run: moon install
     
     - name: Build project
+      working-directory: ./tmdash
       run: ./build.sh build
     
     - name: Run tests
+      working-directory: ./tmdash
       run: ./build.sh test
     
     - name: Upload build artifacts
       if: success()
+      working-directory: ./tmdash
       uses: actions/upload-artifact@v4
       with:
         name: tmdash-build
