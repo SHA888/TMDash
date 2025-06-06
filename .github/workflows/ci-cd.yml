@@ -45,7 +45,7 @@ jobs:
     
     - name: Upload build artifacts
       if: success()
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: tmdash-build
         path: |
@@ -61,7 +61,7 @@ jobs:
     
     steps:
     - name: Download artifacts
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4
       with:
         name: tmdash-build
         path: dist/
